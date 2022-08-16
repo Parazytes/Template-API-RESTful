@@ -1,12 +1,9 @@
-
 module.exports = class CoreDatamapper {
-
-    thisbleName;
+    tableName;
 
     constructor(client) {
         this.client = client;
     }
-
 
     async findByPk(id) {
         const preparedQuery = {
@@ -123,4 +120,5 @@ module.exports = class CoreDatamapper {
 
     async delete(id) {
         await this.constructor.client.query(`DELETE FROM "${this.constructor.tableName}" WHERE id = $1`, [id]);
-    }};
+    }
+};

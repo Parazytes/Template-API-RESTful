@@ -7,7 +7,7 @@
 
 fichier concerné : [./index.js](./index.js)
 
-Il ne se charge QUE tu lancement du serveur. Même la création de l'application est externalisé dans un module. Cela respecte la SoC. On injecte l'application dans une serveur http.
+Il ne se charge QUE tu lancement du serveur. Même la création de l'application est externalisé dans un module. Cela respecte la SoC. On injecte l'application dans un serveur http.
 
 ### Module de l'application
 
@@ -27,7 +27,7 @@ Ce qui est référencé à l'intérieur :
 fichier concerné : [./app/routers/index.js](./app/routers/index.js)
 
 C'est ici que l'on défini l'enchainement des middlewares devant répondre à une requête particulière.
-Si jamais aucune route de correspond à la demande, celle-ci terlminera sa course dans le middleware de 404.
+Si jamais aucune route de correspond à la demande, celle-ci terminera sa course dans le middleware de 404.
 
 Pour chaque route défini:
 
@@ -99,3 +99,9 @@ Ici ils sont stockés dans un/des fichiers de log pendant 1 jour.
 Middleware qui se charge de l'affichage de la [documentation](./app/helpers/apidocs.js) de l'application.
 
 Implémentation nos propres erreurs ["errors"](./app/errors/errorTemplate.js).
+
+
+### Module d'Authentification
+
+Pour l'authentification utiliser JASON Web token
+[Tuto] (https://www.section.io/engineering-education/how-to-build-authentication-api-with-jwt-token-in-nodejs/)
